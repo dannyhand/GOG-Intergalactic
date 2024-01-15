@@ -56,7 +56,7 @@
 			// splitContainer1.Panel2
 			// 
 			splitContainer1.Panel2.Controls.Add(splitContainer2);
-			splitContainer1.Size = new Size(484, 461);
+			splitContainer1.Size = new Size(484, 485);
 			splitContainer1.SplitterDistance = 243;
 			splitContainer1.TabIndex = 0;
 			// 
@@ -68,7 +68,7 @@
 			listBox1.ItemHeight = 15;
 			listBox1.Location = new Point(0, 0);
 			listBox1.Name = "listBox1";
-			listBox1.Size = new Size(243, 461);
+			listBox1.Size = new Size(243, 485);
 			listBox1.TabIndex = 0;
 			listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
 			// 
@@ -86,8 +86,8 @@
 			// splitContainer2.Panel2
 			// 
 			splitContainer2.Panel2.Controls.Add(shortcutButton);
-			splitContainer2.Size = new Size(237, 461);
-			splitContainer2.SplitterDistance = 391;
+			splitContainer2.Size = new Size(237, 485);
+			splitContainer2.SplitterDistance = 411;
 			splitContainer2.TabIndex = 0;
 			// 
 			// productSettings
@@ -98,27 +98,28 @@
 			productSettings.Items.AddRange(new object[] { "autoUpdate", "cloudStorage", "overlay", "desktopShortcut" });
 			productSettings.Location = new Point(0, 0);
 			productSettings.Name = "productSettings";
-			productSettings.Size = new Size(237, 391);
+			productSettings.Size = new Size(237, 411);
 			productSettings.TabIndex = 0;
 			productSettings.ItemCheck += productSettings_ItemCheck;
 			// 
 			// shortcutButton
 			// 
 			shortcutButton.Dock = DockStyle.Fill;
+			shortcutButton.Enabled = false;
 			shortcutButton.Location = new Point(0, 0);
 			shortcutButton.Name = "shortcutButton";
-			shortcutButton.Size = new Size(237, 66);
+			shortcutButton.Size = new Size(237, 70);
 			shortcutButton.TabIndex = 0;
 			shortcutButton.Text = "Create Desktop shortcut";
 			shortcutButton.UseVisualStyleBackColor = true;
+			shortcutButton.Click += shortcutButton_Click;
 			// 
 			// Form1
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(484, 461);
+			ClientSize = new Size(484, 485);
 			Controls.Add(splitContainer1);
-			FormBorderStyle = FormBorderStyle.FixedSingle;
 			MaximizeBox = false;
 			Name = "Form1";
 			Text = "GOG Intergalactic";
@@ -140,7 +141,6 @@
 		private ListBox listBox1;
 		private SplitContainer splitContainer2;
 		private CheckedListBox productSettings;
-		private TableLayoutPanel tableLayoutPanel1;
 		private Label label1;
 		private Button shortcutButton;
 	}
